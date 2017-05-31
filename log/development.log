@@ -937,3 +937,25 @@ Processing by SongsController#edit as HTML
   Rendered songs/_form.html.erb (2.2ms)
   Rendered songs/edit.html.erb within layouts/application (3.1ms)
 Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs/new" for ::1 at 2017-05-31 16:49:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#new as HTML
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2017-05-31 16:49:19 -0400
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (0.1ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 172ms (Views: 168.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/songs/new" for ::1 at 2017-05-31 16:49:57 -0400
+Processing by SongsController#new as HTML
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered songs/_form.html.erb (25.7ms)
+  Rendered songs/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 44ms (Views: 35.9ms | ActiveRecord: 0.8ms)
